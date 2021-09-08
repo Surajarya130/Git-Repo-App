@@ -1,3 +1,8 @@
+:root {
+  --primary-color: #22254b;
+  --secondary-color: #373b69;
+}
+
 .App {
   text-align: center;
 }
@@ -34,5 +39,149 @@
   }
   to {
     transform: rotate(360deg);
+  }
+}
+
+/* Search Box  */
+.searchBox {
+  width: 400px;
+  outline: none;
+}
+
+.modifiedContainer {
+  padding-left: 50%;
+  transform: translateX(-25%);
+}
+
+.searchContainer {
+  display: flex;
+}
+
+.modifiedCard {
+  width: 300px;
+}
+
+.listContainer {
+  display: flex;
+  flex-wrap: wrap;
+  max-width: 960px;
+  margin: 0 auto;
+}
+
+/* Repository Tiles */
+.repoTile {
+  display: flex;
+  flex-wrap: wrap-reverse;
+  justify-content: center;
+}
+
+/* Repo Container holds are the child element */
+.repoContainer {
+  width: 300px;
+  margin: 1rem;
+  background-color: var(--secondary-color);
+  box-shadow: 0 4px 5px rgba(0, 0, 0, 0.2);
+  position: relative;
+  overflow: hidden;
+  border-radius: 5px;
+}
+
+.repoContainer img {
+  width: 100%;
+}
+
+.repoContainer-info {
+  color: #eee;
+  display: block;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0.5rem 1rem 1rem;
+  letter-spacing: 0.5px;
+}
+
+.repoContainer-info h3 {
+  margin-top: 0;
+  font-size: 15px;
+  word-break: break-all;
+  white-space: pre-wrap;
+}
+
+.repoContainer-info span {
+  background-color: var(--primary-color);
+  padding: 0.25rem 0.5rem;
+  border-radius: 3px;
+  font-weight: bold;
+  font-size: 12px;
+}
+
+.repoContainer-info span.green {
+  color: lightgreen;
+}
+
+.repoContainer-info span.orange {
+  color: orange;
+}
+
+.repoContainer-info span.red {
+  color: red;
+}
+
+/* Overview Container */
+.overview {
+  background-color: #fff;
+  padding: 1.5rem;
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  right: 0;
+  max-height: 100%;
+  transform: translateY(101%);
+  transition: transform 0.3s ease-in;
+}
+
+.overview h4 {
+  font-size: 15px;
+  font-weight: bold;
+}
+
+.repoLinkBtn {
+  border-radius: 5px;
+  border: none;
+  font-size: 14px;
+  color: white;
+  background-color: #22254b;
+  text-decoration: none;
+  padding: 5px 10px;
+}
+.repoLinkBtn:hover {
+  background-color: black;
+  color: white;
+}
+
+.repoContainer:hover .overview {
+  transform: translateY(0);
+}
+
+/* Responsive Behavior */
+@media screen and (min-width: 1470px) {
+  .modifiedContainer {
+    padding-left: 40%;
+  }
+}
+
+@media screen and (max-width: 770px) {
+  .form-switch {
+    position: absolute;
+    top: 16px;
+    right: 0.5em;
+  }
+  #navbarTogglerDemo01 {
+    margin-top: 10px;
+  }
+}
+
+@media screen and (max-width: 420px) {
+  .modifiedContainer {
+    padding-left: 40%;
   }
 }
